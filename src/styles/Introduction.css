@@ -1,0 +1,51 @@
+/* src/styles/Introduction.css */
+/* .main-content rule is now in Layout.css */
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+}
+
+.content-section {
+  background-color: var(--white-color);
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  max-width: 896px;
+}
+
+.content-section h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+}
+
+.content-section p,
+.content-section li {
+  font-size: 1rem;
+  color: var(--text-medium);
+  margin-bottom: 1rem;
+}
+
+.content-section ul {
+  list-style-position: inside;
+  padding-left: 0.5rem;
+}
+
+.content-section strong {
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.content-section .icon {
+  display: inline-block;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  color: var(--primary-color);
+}

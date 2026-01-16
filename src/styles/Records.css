@@ -1,0 +1,170 @@
+/* Records page styles matching HTML structure */
+
+.main-content {
+  flex-grow: 1; 
+  padding: 2rem; 
+  max-width: 1200px; 
+  width: 100%; 
+  margin: 0 auto;
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 2rem;
+  align-self: flex-start;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.chart-card {
+  background-color: var(--white-color);
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
+}
+
+.chart-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.records-section {
+  width: 100%;
+}
+
+.records-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--white-color);
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
+}
+
+.records-table th, .records-table td {
+  padding: 1rem 1.25rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.records-table th {
+  background-color: var(--background-medium);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-medium);
+  position: relative;
+}
+
+.records-table th.sortable {
+  cursor: pointer;
+  user-select: none;
+  padding-right: calc(1.25rem + 1em);
+}
+
+.records-table th.sortable:hover {
+  background-color: #e2e8f0;
+}
+
+.records-table th.sortable::after {
+  content: \'\';
+  position: absolute;
+  right: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  opacity: 0.3;
+  transition: opacity 0.2s;
+}
+
+.records-table th.sortable:hover::after {
+  opacity: 0.6;
+}
+
+.records-table th.sortable.active::after {
+  opacity: 1;
+}
+
+.records-table th.sortable.asc::after {
+  border-bottom: 5px solid var(--text-medium);
+}
+
+.records-table th.sortable.desc::after {
+  border-top: 5px solid var(--text-medium);
+}
+
+.records-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.records-table tbody tr:not(.details-row):hover {
+  background-color: #f9fafb;
+}
+
+.details-btn {
+  font-family: \'Inter\', sans-serif; 
+  font-size: 0.9rem; 
+  font-weight: 600;
+  color: var(--primary-color); 
+  background: none; 
+  border: none;
+  cursor: pointer;
+}
+
+.details-row {
+  display: table-row;
+}
+
+.details-content {
+  background-color: #f9fafb;
+  padding: 1.5rem;
+}
+
+.details-content pre {
+  font-family: \'Menlo\', \'Consolas\', monospace;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-dark);
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  background-color: var(--white-color);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+}
+
+.apexcharts-tooltip-custom {
+  background: #ffffff;
+  color: #373d3f;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.375rem; /* 6px */
+  padding: 0.5rem 0.75rem; /* 8px 12px */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  font-family: 'SF Pro Display', -apple-system, sans-serif;
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.5;
+}
+
+.apexcharts-tooltip-custom b {
+  font-weight: 600;
+  color: #1e293b;
+}

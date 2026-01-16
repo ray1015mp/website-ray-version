@@ -1,0 +1,44 @@
+
+[functions.analyze-speech]
+enabled = true
+verify_jwt = true
+import_map = "./functions/analyze-speech/deno.json"
+# Uncomment to specify a custom file path to the entrypoint.
+# Supported file extensions are: .ts, .js, .mjs, .jsx, .tsx
+entrypoint = "./functions/analyze-speech/index.ts"
+# Specifies static files to be bundled with the function. Supports glob patterns.
+# For example, if you want to serve static HTML pages in your function:
+# static_files = [ "./functions/analyze-speech/*.html" ]
+
+[functions.generate-practice-word]
+enabled = true
+verify_jwt = true
+import_map = "./functions/generate-practice-word/deno.json"
+# Uncomment to specify a custom file path to the entrypoint.
+# Supported file extensions are: .ts, .js, .mjs, .jsx, .tsx
+entrypoint = "./functions/generate-practice-word/index.ts"
+# Specifies static files to be bundled with the function. Supports glob patterns.
+# For example, if you want to serve static HTML pages in your function:
+# static_files = [ "./functions/generate-practice-word/*.html" ]
+
+[functions.get-leaderboard]
+enabled = true
+verify_jwt = true
+import_map = "./functions/get-leaderboard/deno.json"
+# Uncomment to specify a custom file path to the entrypoint.
+# Supported file extensions are: .ts, .js, .mjs, .jsx, .tsx
+entrypoint = "./functions/get-leaderboard/index.ts"
+# Specifies static files to be bundled with the function. Supports glob patterns.
+# For example, if you want to serve static HTML pages in your function:
+# static_files = [ "./functions/get-leaderboard/*.html" ]
+
+[functions.get-training-plan]
+enabled = true
+verify_jwt = true
+import_map = "./functions/get-training-plan/deno.json"
+# Uncomment to specify a custom file path to the entrypoint.
+# Supported file extensions are: .ts, .js, .mjs, .jsx, .tsx
+entrypoint = "./functions/get-training-plan/index.ts"
+# Specifies static files to be bundled with the function. Supports glob patterns.
+# For example, if you want to serve static HTML pages in your function:
+# static_files = [ "./functions/get-training-plan/*.html" ]

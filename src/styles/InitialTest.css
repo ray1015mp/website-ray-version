@@ -1,0 +1,189 @@
+/* src/styles/InitialTest.css (The final version with the popup overlay styles) */
+
+/* 1. 借鑒 Profile 頁面的主容器樣式 */
+.initial-test-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--background-color);
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border-color);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* 2. 統一的頁面標題樣式 */
+.page-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.page-subtitle {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-medium);
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+/* 3. 核心的單詞顯示區域 */
+.word-display-card {
+  background-color: var(--primary-color-light);
+  border: 2px solid var(--primary-color);
+  border-radius: 0.75rem;
+  padding: 3rem 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.1);
+}
+
+.word-display-card .word {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: var(--primary-color-dark);
+  letter-spacing: 0.1em;
+}
+
+/* 4. 控制按鈕區域的佈局 */
+.controls-section {
+  text-align: center;
+  border-top: 1px solid var(--border-color);
+  padding-top: 2rem;
+}
+
+.controls-section p {
+  font-size: 0.9rem;
+  color: var(--text-medium);
+  margin-bottom: 1rem;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* 5. 統一的按鈕樣式 */
+.test-button, .skip-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.test-button {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.test-button:hover {
+  background-color: var(--primary-color-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skip-button {
+  background-color: transparent;
+  color: var(--text-medium);
+  border: 2px solid var(--border-color);
+}
+
+.skip-button:hover {
+  background-color: var(--background-color-hover);
+  color: var(--text-dark);
+  border-color: var(--text-medium);
+}
+
+.test-button:disabled, .skip-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* 動畫效果 */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- ✨ 核心修正: 從 Practice.css 複製過來的、完整的彈出式遮罩樣式 ✨ --- */
+#custom-alert-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+#custom-alert-overlay.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+.alert-box {
+  background-color: var(--white-color);
+  padding: 2rem 2.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
+}
+#custom-alert-overlay.visible .alert-box {
+  transform: scale(1);
+}
+.alert-box .spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid var(--primary-color);
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+.alert-box .alert-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Add this to your CSS file */
+.media-error-alert {
+  background-color: #fee2e2;
+  color: #991b1b;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.media-info-alert {
+  background-color: #e0f2fe;
+  color: #075985;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}

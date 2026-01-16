@@ -1,0 +1,22 @@
+{
+  "Kindergarten": [
+    "me", "no", "go", "up", "it", "on", "bed", "cup", "dog", "sun", 
+    "key", "car", "fan", "van", "see", "zoo", "shoe", "show", "chew", "jaw", 
+    "thumb", "this", "leg", "run", "yes"
+  ],
+  "Primary-School": [
+    "ship", "sheep", "sit", "seat", "pull", "pool", "cat", "cut", "hat", "hot", 
+    "back", "pack", "pig", "big", "light", "right", "lake", "rake", "vest", "best", 
+    "think", "sink", "jump", "chair", "queen"
+  ],
+  "Secondary-School": [
+    "frog", "from", "stop", "spot", "slip", "sleep", "crab", "grab", "plate", "play", 
+    "bread", "brown", "snake", "snack", "swing", "swim", "splash", "split", "street", "scream", 
+    "vision", "pleasure", "measure", "treasure", "garage"
+  ],
+  "Adult": [
+    "statistics", "specific", "aluminum", "literally", "phenomenon", "anesthesiologist", "conscientious", "entrepreneur", "hierarchy", "juxtaposition", 
+    "squirrel", "brewery", "rural", "February", "library", "particularly", "regularly", "vulnerable", "temperature", "congratulations", 
+    "organization", "pronunciation", "articulation", "developmental", "communication"
+  ]
+}

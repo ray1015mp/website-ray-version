@@ -1,0 +1,194 @@
+/* --- Base Styles for Login Page --- */
+.auth-page-container {
+  font-family: 'Inter', sans-serif;
+  background-color: #f0f4f8;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* --- Login Page Wrapper --- */
+.login-page-wrapper {
+  position: fixed;
+  inset: 0;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* ... (user-select and background-layer styles remain the same) ... */
+.login-page-wrapper, .auth-container, .auth-header, .auth-footer, .auth-form, .input-group, .auth-header h1, .auth-header p {
+  -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;
+}
+.auth-container input, .auth-container textarea, .auth-container button, .auth-container a {
+  -webkit-user-select: text; -moz-user-select: text; -ms-user-select: text; user-select: text;
+}
+.background-layer {
+  position: fixed; inset: 0; z-index: 1; pointer-events: none;
+}
+.background-layer canvas {
+  width: 100% !important; height: 100% !important; display: block; position: fixed; top: 0; left: 0;
+}
+
+
+/* --- MODIFICATION START --- */
+.content-layer {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 26rem;
+}
+
+.login-page-title {
+  font-family: 'SF Pro Display', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--text-dark); /* 設定一個後備顏色 */
+  text-align: center;
+  /* 恢復您想要的文字陰影 */
+  text-shadow: 0 2px 30px rgba(0, 0, 0, 0.3);
+}
+/* --- MODIFICATION END --- */
+
+
+.auth-body {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+
+/* --- Auth Container --- */
+.auth-container {
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  text-align: center;
+}
+
+/* ... (The rest of the CSS remains the same) ... */
+.auth-header h1 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+.auth-header p {
+  color: #64748b;
+  margin-bottom: 2rem;
+}
+.auth-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.input-group {
+  text-align: left;
+}
+.input-group label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #475569;
+}
+.input-group input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.input-group input:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+}
+.submit-btn {
+  width: 100%;
+  background-color: #4f46e5;
+  color: #ffffff;
+  padding: 0.875rem;
+  border: none;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, opacity 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 44px;
+}
+.submit-btn:hover {
+  background-color: #4338ca;
+}
+.submit-btn:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+.loader {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ffffff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  animation: rotation 1s linear infinite;
+}
+@keyframes rotation {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.auth-footer {
+  margin-top: 2rem;
+  font-size: 0.875rem;
+  color: #64748b;
+}
+.auth-footer a {
+  color: #4f46e5;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+.auth-footer a:hover {
+  text-decoration: underline;
+}
+.message {
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  text-align: center;
+}
+.message.success {
+  background-color: #dcfce7;
+  color: #166534;
+}
+.message.error {
+  background-color: #fee2e2;
+  color: #991b1b;
+}

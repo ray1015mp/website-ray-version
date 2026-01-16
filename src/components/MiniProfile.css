@@ -1,0 +1,59 @@
+/* src/styles/MiniProfile.css */
+
+.mini-profile-container {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 0.85rem 1.25rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px_12px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: 300px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.mini-profile-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.profile-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.4rem; /* 調整行間距以適應更多內容 */
+  font-size: 0.8rem;
+  color: var(--text-dark);
+}
+
+.profile-content p {
+  margin: 0;
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.profile-content strong {
+  color: var(--primary-color);
+  font-weight: 700;
+  margin-right: 0.5em;
+}
+
+/* --- ✨ 核心新增：為新標題添加樣式 ✨ --- */
+.status-header {
+  font-size: 0.9rem; /* 讓標題字體稍大 */
+  font-weight: 800; /* 粗體 */
+  color: var(--text-dark);
+  text-align: center; /* 置中 */
+  margin-bottom: 0.4rem; /* 與下方內容的間距 */
+  padding-bottom: 0.4rem; /* 標題下方的內邊距 */
+  border-bottom: 1px solid var(--border-color); /* 添加一條分隔線 */
+  grid-column: 1 / -1; /* 確保標題橫跨整個網格 */
+}

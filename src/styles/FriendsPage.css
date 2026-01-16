@@ -1,0 +1,300 @@
+/* src/styles/FriendsPage.css */
+
+.friends-page-container {
+    width: 100%;
+    padding: 2rem 3rem;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: calc(100vh - 80px);
+}
+
+.friends-content-wrapper {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 1.5rem;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.main-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.side-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+    color: #1a202c;
+}
+
+/* 搜尋表單 */
+.search-form {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.search-input {
+    flex-grow: 1;
+    padding: 0.75rem 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    transition: border-color 0.2s;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #5a67d8;
+}
+
+.search-results-container {
+    margin-top: 1rem;
+}
+
+/* 通用列表樣式 */
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 10px;
+    transition: all 0.2s;
+}
+
+.list-item:not(:last-child) {
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.list-item:hover {
+    background-color: #f8fafc;
+}
+
+.friends-list,
+.tutors-list,
+.search-results-list,
+.requests-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+}
+
+.avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.user-name {
+    font-weight: 600;
+    color: #2d3748;
+    font-size: 1rem;
+}
+
+.user-level {
+    font-size: 0.875rem;
+    color: #718096;
+}
+
+.empty-message,
+.no-results-message {
+    text-align: center;
+    color: #a0aec0;
+    padding: 2rem 1rem;
+    font-size: 0.95rem;
+}
+
+/* 好友邀請列表 */
+.request-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 10px;
+    transition: background-color 0.2s;
+}
+
+.request-item:not(:last-child) {
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.request-item:hover {
+    background-color: #f8fafc;
+}
+
+.request-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-shrink: 0;
+}
+
+/* 按鈕樣式 */
+.btn {
+    padding: 0.625rem 1.25rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.btn-primary {
+    background-color: #5a67d8;
+    color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+    background-color: #4c51bf;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(90, 103, 216, 0.3);
+}
+
+.btn-add {
+    background-color: #edf2f7;
+    color: #4a5568;
+}
+
+.btn-add:hover:not(:disabled) {
+    background-color: #e2e8f0;
+}
+
+.btn-accept {
+    background-color: #10b981;
+    color: white;
+    padding: 0.5rem 0.875rem;
+}
+
+.btn-accept:hover:not(:disabled) {
+    background-color: #059669;
+}
+
+.btn-decline {
+    background-color: #ef4444;
+    color: white;
+    padding: 0.5rem 0.875rem;
+}
+
+.btn-decline:hover:not(:disabled) {
+    background-color: #dc2626;
+}
+
+.btn-remove {
+    background-color: transparent;
+    color: #ef4444;
+    border: 2px solid #ef4444;
+}
+
+.btn-remove:hover:not(:disabled) {
+    background-color: #ef4444;
+    color: white;
+}
+
+/* 提示訊息 */
+.toast-message {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateX(-50%) translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+}
+
+.toast-message.success {
+    background-color: #10b981;
+}
+
+.toast-message.error {
+    background-color: #ef4444;
+}
+
+/* 響應式設計 */
+@media (max-width: 968px) {
+    .friends-content-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .friends-page-container {
+        padding: 1.5rem 1rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .request-item,
+    .list-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+
+    .request-actions {
+        width: 100%;
+        justify-content: stretch;
+    }
+
+    .request-actions .btn {
+        flex: 1;
+    }
+}

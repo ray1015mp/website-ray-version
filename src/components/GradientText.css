@@ -1,0 +1,27 @@
+/* src/components/GradientText.css */
+
+/* 
+  這個 class 現在只負責核心的漸變文字效果。
+  所有佈局和字體樣式都由使用它的父元件（如 h1）來決定。
+*/
+.gradient-text-content {
+  display: inline-block; /* 確保背景漸變能正確應用 */
+  background-size: 300% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradient-flow linear infinite; /* 使用一個新的動畫名以避免衝突 */
+}
+
+/* 保持動畫關鍵影格不變 */
+@keyframes gradient-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

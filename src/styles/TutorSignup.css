@@ -1,0 +1,165 @@
+/* Responsive page wrapper matching previous visual system */
+.tutor-signup {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #f0f2f5;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)),
+    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4d4d8' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  position: relative;
+}
+
+/* Language selector positioning */
+.tutor-signup__language-selector {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+}
+
+/* Card that contains the form */
+.tutor-signup__title {
+  width: 100%;
+  max-width: 550px;
+  margin: 0 0 1rem 0;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+/* Form container */
+.tutor-signup__form {
+  width: 100%;
+  max-width: 550px;
+  background-color: #ffffff;
+  padding: 2.5rem 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+/* Labels and input groups */
+.tutor-signup__label {
+  display: block;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 1.25rem;
+  font-size: 0.95rem;
+}
+
+/* Shared input styles (text, email, password, number) */
+.tutor-signup__input,
+.tutor-signup__textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+  margin-top: 0.5rem;
+}
+
+/* Textarea specifics */
+.tutor-signup__textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Focus states */
+.tutor-signup__input:focus,
+.tutor-signup__textarea:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+/* Submit button */
+.tutor-signup__submit {
+  width: 100%;
+  padding: 0.85rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: linear-gradient(to right, #4f46e5, #7c3aed);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* Hover and disabled states */
+.tutor-signup__submit:hover {
+  box-shadow: 0 4px 15px -5px rgba(124, 58, 237, 0.6);
+  transform: translateY(-2px);
+}
+
+.tutor-signup__submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Error message */
+.tutor-signup__error {
+  margin-top: 1rem;
+  padding: 0.8rem 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-weight: 500;
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+/* Success message */
+.tutor-signup__success {
+  margin-top: 1rem;
+  padding: 0.8rem 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-weight: 500;
+  background-color: #d1fae5; /* 柔和的綠色背景 */
+  color: #065f46; /* 深綠色文字 */
+}
+
+/* Back to Login button */
+.tutor-signup__back-to-login {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #6b7280;
+  background-color: #f3f4f6;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.tutor-signup__back-to-login:hover {
+  background-color: #e5e7eb;
+  border-color: #9ca3af;
+  color: #374151;
+}
+
+
+/* Utility responsive tweaks */
+@media (max-width: 640px) {
+  .tutor-signup__form {
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+  }
+
+  .tutor-signup__title {
+    font-size: 1.75rem;
+  }
+}

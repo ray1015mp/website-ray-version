@@ -1,0 +1,22 @@
+/* Shared layout styles for main content area */
+.main-content {
+  flex-grow: 1;
+  padding: 2rem;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Width utility classes for different pages */
+.main-content.width-intro {
+  max-width: 960px;
+}
+.main-content.width-practice {
+  max-width: 800px;
+}
+.main-content.width-records {
+  max-width: 1200px;
+}
+.main-content.width-profile {
+  max-width: 720px;
+}
